@@ -46,6 +46,10 @@ class ArtGalleryTest {
 	void test_Art_Gallery_entity_mapping() {
 		assertNotNull(artGallery);
 		assertEquals("Vincent", artGallery.getFirstName());
+		assertEquals("van Gogh", artGallery.getLastName());
+		assertEquals("Post-Impressionism", artGallery.getArtStyle());
+		assertEquals(1853, artGallery.getBirthYear());
+		assertEquals(1890, artGallery.getDeathYear());
 	}
 
 }

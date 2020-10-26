@@ -23,6 +23,10 @@ DROP TABLE IF EXISTS `artgallery` ;
 CREATE TABLE IF NOT EXISTS `artgallery` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(100) NULL,
+  `last_name` VARCHAR(100) NULL,
+  `art_style` VARCHAR(100) NULL,
+  `birth_year` INT NULL,
+  `death_year` INT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -43,6 +47,6 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `artgallerydb`;
-INSERT INTO `artgallery` (`id`, `first_name`) VALUES (1, 'Vincent');
+INSERT INTO `artgallery` (`id`, `first_name`, `last_name`, `art_style`, `birth_year`, `death_year`) VALUES (1, 'Vincent', 'van Gogh', 'Post-Impressionism', 1853, 1890);
 
 COMMIT;
